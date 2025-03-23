@@ -5,23 +5,26 @@ int main() {
 	int numeroIngresado, candidatoPrimo, divisorPrueba;
 	int esPrimo;
 	
-	// Solicitar al usuario que ingrese un número
-	printf("Ingrese un número positivo: ");
-	scanf("%d", &numeroIngresado);
-	
-	// Verificar que el número ingresado sea positivo
-	if (numeroIngresado < 1) {
-		printf("Por favor, ingrese un número entero positivo.\n");
-		return 1; // Salir del programa con un código de error
+	// Solicitar al usuario que ingrese un nÃºmero
+	printf("Ingrese un nÃºmero positivo: ");
+	if (scanf("%d", &numeroIngresado) != 1) {
+		printf("Entrada no vÃ¡lida. Por favor, ingrese un nÃºmero entero positivo.\n");
+		return 1; // Salir del programa con un cÃ³digo de error
 	}
 	
-	printf("Números primos desde 1 hasta %d:\n", numeroIngresado);
+	// Verificar que el nÃºmero ingresado sea positivo
+	if (numeroIngresado < 1) {
+		printf("Por favor, ingrese un nÃºmero entero positivo.\n");
+		return 1; // Salir del programa con un cÃ³digo de error
+	}
 	
-	// Iterar desde 2 hasta el número ingresado
+	printf("NÃºmeros primos desde 1 hasta %d:\n", numeroIngresado);
+	
+	// Iterar desde 2 hasta el nÃºmero ingresado
 	for (candidatoPrimo = 2; candidatoPrimo <= numeroIngresado; candidatoPrimo++) {
 		esPrimo = 1; // Asumimos que candidatoPrimo es primo
 		
-		// Verificar si candidatoPrimo es divisible por algún número desde 2 hasta la raíz cuadrada de candidatoPrimo
+		// Verificar si candidatoPrimo es divisible por algÃºn nÃºmero desde 2 hasta la raÃ­z cuadrada de candidatoPrimo
 		for (divisorPrueba = 2; divisorPrueba <= sqrt(candidatoPrimo); divisorPrueba++) {
 			if (candidatoPrimo % divisorPrueba == 0) {
 				esPrimo = 0; // No es primo
@@ -32,13 +35,19 @@ int main() {
 		// Si esPrimo sigue siendo 1, entonces candidatoPrimo es primo
 		if (esPrimo) {
 			printf("%d", candidatoPrimo);
-			// Imprimir una coma después de cada número primo, excepto el último
+			// Imprimir una coma despuÃ©s de cada nÃºmero primo, excepto el Ãºltimo
 			if (candidatoPrimo < numeroIngresado) {
 				printf(", ");
 			}
 		}
 	}
 	
-	printf("\n"); // Nueva línea al final de la salida
-	return 0; // Salir del programa con éxito
+	printf("\n"); // Nueva lÃ­nea al final de la salida
+	
+	// Esperar a que el usuario presione una tecla antes de cerrar
+	printf("Presione Enter para salir...");
+	getchar(); // Captura el salto de lÃ­nea pendiente
+	getchar(); // Espera a que el usuario presione Enter
+	
+	return 0; // Salir del programa con Ã©xito
 }

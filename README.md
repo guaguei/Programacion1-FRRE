@@ -1,6 +1,6 @@
-# Trabajos Prácticos de Programación 1 - FRRE - UTN
+# Ejercicios de Programación 1 - FRRE - UTN
 
-Este repositorio contiene los trabajos prácticos de la materia **Programación 1** de la **Facultad Regional de Resistencia (FRRE)** de la **Universidad Tecnológica Nacional (UTN)**. Aquí se aplican conceptos fundamentales de programación en C/C++.
+Este repositorio contiene ejercicios de la materia **Programación 1** de la **Facultad Regional de Resistencia (FRRE)** de la **Universidad Tecnológica Nacional (UTN)**. Aquí se aplican conceptos fundamentales de programación en C/C++.
 
 ## Entorno de Desarrollo
 
@@ -18,7 +18,7 @@ Para más información, visita el sitio oficial: [ZinjaI](https://zinjai.sourcef
 ## Instrucciones de Uso
 
 1. Clona el repositorio en tu máquina local.
-2. Abre ZinjaI y carga el archivo correspondiente al trabajo práctico que deseas realizar.
+2. Abre ZinjaI y carga el archivo correspondiente al ejercicio que deseas realizar.
 3. Compila y ejecuta el programa desde el IDE.
 
 ---

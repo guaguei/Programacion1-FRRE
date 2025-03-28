@@ -1,10 +1,10 @@
 # Ejercicios de Programación 1 - FRRE - UTN
 
-Este repositorio contiene ejercicios de la materia **Programación 1** de la **Facultad Regional de Resistencia (FRRE)** de la **Universidad Tecnológica Nacional (UTN)**. Aquí se aplican conceptos fundamentales de programación en C/C++.
+Este repositorio contiene ejercicios de la materia **Programación 1** de la **Facultad Regional de Resistencia (FRRE)** de la **Universidad Tecnológica Nacional (UTN)**. Aquí se aplican conceptos fundamentales de programación en **C**.
 
 ## Entorno de Desarrollo
 
-Para compilar y ejecutar los archivos de este repositorio, se recomienda utilizar **ZinjaI**.
+Para compilar y ejecutar los archivos de este repositorio, se recomienda utilizar **ZinjaI**, un IDE sugerido por la profesora de la asignatura.
 
 ### ¿Qué es ZinjaI?
 

@@ -3,7 +3,7 @@
 int main() {
 	int a, b;
 	
-	// Solicitar al usuario que ingrese dos nÃºmeros
+	// Solicitar al usuario que ingrese dos números
 	printf("Ingrese el primer numero (a): ");
 	scanf("%d", &a);
 	printf("Ingrese el segundo numero (b): ");
@@ -17,11 +17,11 @@ int main() {
 	int resta = a - b;
 	printf("Resta: %d - %d = %d\n", a, b, resta);
 	
-	// MultiplicaciÃ³n
+	// Multiplicación
 	int multiplicacion = a * b;
 	printf("Multiplicacion: %d * %d = %d\n", a, b, multiplicacion);
 	
-	// DivisiÃ³n
+	// División
 	if (b != 0) {
 		float division = (float)a / b; // Casting a float para obtener resultado decimal
 		printf("Division: %d / %d = %.2f\n", a, b, division);
@@ -29,7 +29,7 @@ int main() {
 		printf("Division: No se puede dividir por cero.\n");
 	}
 	
-	// MÃ³dulo
+	// Módulo
 	if (b != 0) {
 		int modulo = a % b;
 		printf("Modulo: %d %% %d = %d\n", a, b, modulo);
@@ -53,8 +53,12 @@ int main() {
 	printf("Operaciones compuestas: a = %d, b = %d\n", a, b);
 	
 	a *= 2; // Multiplica a por 2
-	b /= 2; // Divide b entre 2
-	printf("DespuÃ©s de operaciones compuestas: a = %d, b = %d\n", a, b);
+	if (b != 0) {
+		b /= 2; // Divide b entre 2 solo si b no es cero
+	} else {
+		printf("No se puede dividir b entre 2 porque b es cero.\n");
+	}
+	printf("Después de operaciones compuestas: a = %d, b = %d\n", a, b);
 	
-	return 0;
+	return 0; // Salir del programa con éxito
 }

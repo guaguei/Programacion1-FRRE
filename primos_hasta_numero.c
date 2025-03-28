@@ -1,53 +1,44 @@
 #include <stdio.h>
 #include <math.h>
 
-int main() {
-	int numeroIngresado, candidatoPrimo, divisorPrueba;
-	int esPrimo;
-	
-	// Solicitar al usuario que ingrese un n√∫mero
-	printf("Ingrese un n√∫mero positivo: ");
-	if (scanf("%d", &numeroIngresado) != 1) {
-		printf("Entrada no v√°lida. Por favor, ingrese un n√∫mero entero positivo.\n");
-		return 1; // Salir del programa con un c√≥digo de error
-	}
-	
-	// Verificar que el n√∫mero ingresado sea positivo
-	if (numeroIngresado < 1) {
-		printf("Por favor, ingrese un n√∫mero entero positivo.\n");
-		return 1; // Salir del programa con un c√≥digo de error
-	}
-	
-	printf("N√∫meros primos desde 1 hasta %d:\n", numeroIngresado);
-	
-	// Iterar desde 2 hasta el n√∫mero ingresado
-	for (candidatoPrimo = 2; candidatoPrimo <= numeroIngresado; candidatoPrimo++) {
-		esPrimo = 1; // Asumimos que candidatoPrimo es primo
-		
-		// Verificar si candidatoPrimo es divisible por alg√∫n n√∫mero desde 2 hasta la ra√≠z cuadrada de candidatoPrimo
-		for (divisorPrueba = 2; divisorPrueba <= sqrt(candidatoPrimo); divisorPrueba++) {
-			if (candidatoPrimo % divisorPrueba == 0) {
-				esPrimo = 0; // No es primo
-				break; // Salir del bucle
-			}
+int esPrimo(int numero) {
+	if (numero < 2) return 0; // 0 y 1 no son primos
+	for (int divisor = 2; divisor <= sqrt(numero); divisor++) {
+		if (numero % divisor == 0) {
+			return 0; // No es primo
 		}
-		
-		// Si esPrimo sigue siendo 1, entonces candidatoPrimo es primo
-		if (esPrimo) {
+	}
+	return 1; // Es primo
+}
+
+int main() {
+	int numeroIngresado;
+	
+	// Solicitar al usuario que ingrese un n˙mero
+	printf("Ingrese un n˙mero positivo: ");
+	if (scanf("%d", &numeroIngresado) != 1) {
+		printf("Entrada no v·lida. Por favor, ingrese un n˙mero entero positivo.\n");
+		return 1; // Salir del programa con un cÛdigo de error
+	}
+	
+	// Verificar que el n˙mero ingresado sea positivo
+	if (numeroIngresado < 1) {
+		printf("Por favor, ingrese un n˙mero entero positivo.\n");
+		return 1; // Salir del programa con un cÛdigo de error
+	}
+	
+	printf("N˙meros primos desde 1 hasta %d:\n", numeroIngresado);
+	
+	// Iterar desde 2 hasta el n˙mero ingresado
+	for (int candidatoPrimo = 2; candidatoPrimo <= numeroIngresado; candidatoPrimo++) {
+		if (esPrimo(candidatoPrimo)) {
 			printf("%d", candidatoPrimo);
-			// Imprimir una coma despu√©s de cada n√∫mero primo, excepto el √∫ltimo
+			// Imprimir una coma despuÈs de cada n˙mero primo, excepto el ˙ltimo
 			if (candidatoPrimo < numeroIngresado) {
 				printf(", ");
 			}
 		}
 	}
 	
-	printf("\n"); // Nueva l√≠nea al final de la salida
-	
-	// Esperar a que el usuario presione una tecla antes de cerrar
-	printf("Presione Enter para salir...");
-	getchar(); // Captura el salto de l√≠nea pendiente
-	getchar(); // Espera a que el usuario presione Enter
-	
-	return 0; // Salir del programa con √©xito
+	return 0; // Salir del programa con Èxito
 }

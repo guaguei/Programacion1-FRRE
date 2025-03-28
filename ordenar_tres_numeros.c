@@ -1,20 +1,20 @@
 #include <stdio.h>
 
 int main() {
-	// DeclaraciÃ³n de variables para almacenar los tres nÃºmeros
+	// Declaración de variables para almacenar los tres números
 	int num1, num2, num3;
 	
-	// Solicitar al usuario que ingrese tres nÃºmeros
-	printf("Por favor, ingresa el primer nÃºmero: ");
+	// Solicitar al usuario que ingrese tres números
+	printf("Por favor, ingresa el primer número: ");
 	scanf("%d", &num1);
 	
-	printf("Por favor, ingresa el segundo nÃºmero: ");
+	printf("Por favor, ingresa el segundo número: ");
 	scanf("%d", &num2);
 	
-	printf("Por favor, ingresa el tercer nÃºmero: ");
+	printf("Por favor, ingresa el tercer número: ");
 	scanf("%d", &num3);
 	
-	// DeclaraciÃ³n de variables para almacenar el orden
+	// Declaración de variables para almacenar el orden
 	int max, mid, min;
 	
 	// Encontrar el mayor, el segundo mayor y el menor
@@ -47,8 +47,8 @@ int main() {
 		}
 	}
 	
-	// Imprimir los nÃºmeros en orden de mayor a menor
-	printf("Los nÃºmeros en orden de mayor a menor son: %d, %d, %d\n", max, mid, min);
+	// Imprimir los números en orden de mayor a menor
+	printf("Los números en orden de mayor a menor son: %d, %d, %d\n", max, mid, min);
 	
-	return 0; // Indicar que el programa terminÃ³ correctamente
+	return 0; // Indicar que el programa terminó correctamente
 }
